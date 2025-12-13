@@ -1,0 +1,112 @@
+{
+        "layer": "top",
+        "position": "bottom",
+        "reload_style_on_change": true,
+        "modules-left": [],
+        "modules-center": ["hyprland/workspaces", "clock", "cpu", "memory", "temperature", "cava", "custom/spotify", "pulseaudio", "tray"],
+        "modules-right": [],
+        "include": [
+            "$XDG_CONFIG_HOME/waybar/scripts/*json*",
+        ],
+
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "disable-scroll": false,
+            "on-scroll-up": "hyprctl dispatch workspace -1",
+            "on-scroll-down": "hyprctl dispatch workspace +1",
+            "format-icons": {
+                "active": "",
+                "default": "",
+                "empty": ""
+            }
+        },
+        "clock": {
+            "format": "{:%a, %dth of %B. Currently %H:%M.} ",
+            "interval": 1,
+        },
+        "network": {
+            "format-wifi": "󰤢  wifi",
+            "format-ethernet": "󰈀  wired",
+            "format-disconnected": "󰤠   disconnected",
+            "interval": 5,
+            "tooltip-format": "{essid} ({signalStrength}%)",
+            "on-click": "nm-connection-editor"
+        
+         },
+        "bluetooth": {
+            "format": "󰂲",
+            "format-on": "{icon} on",
+            "format-off": "{icon} off", 
+            "format-connected":"{icon} connected",
+            "format-icons":{
+                "on":"󰂯",
+                "off": "󰂲 ",
+                "connected": "󰂱",
+                },
+            "on-click": "blueman-manager",
+            "tooltip-format-connected":"{device_enumerate}"
+          },
+        "cpu": {
+            "interval": 1,
+            "format": "cpu {usage}%",
+            "on-click": "kitty btop"
+  },
+
+        "memory": {
+            "interval": 1,
+            "format": "mem {used:0.1f}gb",
+            "on-click": "kitty btop"
+  },
+        "tray": {
+            "icon-size": 14,
+            "icons-size-multiplier": 1.6
+        },
+        "pulseaudio": {
+            "format": "{icon} {volume}%",
+            "format-muted": " ",
+            "format-icons": {
+              "default": ["", "", " "],
+            "tooltip": true,
+            "scroll-step": 1.0,
+            "on-click": "pavucontrol",
+            "on-scroll-up": "pamixer --increase 5",
+            "on-scroll-down": "pamixer --decrease 5"
+            },
+            "on-click": "pavucontrol",
+            "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+            "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+        },
+        "custom/spotify": {
+                "interval": 1,
+                "return-type": "json",
+                "exec": "~/.config/waybar/scripts/spotify.sh",
+                "on-click": "spotify; pkill -f spotify.sh; sleep 5; ~/.config/waybar/scripts/spotify.sh; pkill -RTMIN+8 waybar",
+                "escape": true
+        },
+        "custom/sep": {
+          "format": "",
+          "tooltip": true
+        },
+        "cava": {
+            // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+            "framerate": 30,
+            "autosens": 0,
+            "sensitivity": 30,
+            "bars": 5,
+            "lower_cutoff_freq": 50,
+            "higher_cutoff_freq": 10000,
+            "method": "pulse",
+            "source": "auto",
+            "stereo": true,
+            "reverse": false,
+            "bar_delimiter": 0,
+            "monstercat": false,
+            "waves": false,
+            "noise_reduction": 0.77,
+            "input_delay": 2,
+            "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+            "actions": {
+              "on-click-right": "mode"
+            }
+          }
+} 
