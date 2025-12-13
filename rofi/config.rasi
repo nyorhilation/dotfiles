@@ -53,7 +53,7 @@ entry {
 
 inputbar {
     children: [ entry ];
-    background-image: url("~/Pictures/wallpapers/tropicaltouka.jpg");
+    background-image: url("path/to/your/image");
     border-radius: 0px 0 0px 0px;
     padding: 100px 30px 30px 30px;
     border-radius: 30px 30px 0px 0px;
