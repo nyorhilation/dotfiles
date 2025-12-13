@@ -7,13 +7,13 @@
 window#waybar{
 	all: unset;
 	/* background: @color0; */
-}
+} /*
 .modules-left {
     padding:7px;
     margin:0px 0px 0px 0px;
     border-radius:0px 10px 0px 0px;
     background: @color0;
-}
+} */
 .modules-center {
     padding:7px;
     margin:5px 0px 5px 0px;
@@ -21,12 +21,13 @@ window#waybar{
     background: @color0;
  
 }
+/*
 .modules-right {
 	padding:7px;
     margin: 5px 0px 0px 0px;
     border-radius:10px 0px 0px 0px;
     background: @color0;
-}
+}*/
 tooltip {
     background:@background;
     color: @color7;
