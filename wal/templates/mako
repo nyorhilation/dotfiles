@@ -1,0 +1,14 @@
+font=FiraMono Nerd Font 11
+background-color={background}
+text-color={foreground}
+border-color={color5}
+progress-color=over {color2}
+anchor=bottom-right
+default-timeout=5000
+margin=10
+outer-margin=10,10,15,10
+padding=10,15
+border-size=2
+border-radius=5
+max-icon-size=50
+group-by=app-name

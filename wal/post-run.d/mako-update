@@ -1,0 +1,4 @@
+#!/bin/sh
+sleep 0.5
+cp ~/.cache/wal/mako ~/.config/mako/config
+makoctl reload

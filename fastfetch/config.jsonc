@@ -1,0 +1,76 @@
+{
+  "logo": {
+    "source": "~/Pictures/icons/toukaicon.jpg",
+    "height": 11
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "╭   :",
+      "format": "{6} {7} {8}  ─────────────────────╮",
+      "keyColor": "white"
+    },
+    {
+      "type": "custom",
+      "key": "│  神代利世 :",
+      "format": "Não existe essa coisa de destino   │",
+      "keyColor": "white"
+    },
+    {
+      "type": "os",
+      "key": "│   OS :",
+      "format": "{3}                   │",
+      "keyColor": "white"
+    },
+    {
+      "type": "display",
+      "key": "│  󰍹  Display :",
+      "format": "{1}x{2} @ {3}Hz                │",
+      "keyColor": "white"
+    },
+    {
+      "type": "terminal",
+      "key": "│    Terminal :",
+      "keyColor": "white",
+      "format": "{1}                           │"
+    },
+    {
+      "type": "wm",
+      "key": "│   WM :",
+      "format": "{2}                               │",
+      "keyColor": "white"
+    },
+    {
+      "type": "cpu",
+      "format": "{1} @ {7}        │",
+      "key": "│    CPU :",
+      "keyColor": "white"
+    },
+    {
+      "type": "memory",
+      "key": "│    Memory :",
+      "keyColor": "white",
+      "format": "{2}                         │"
+    },
+    {
+      "type": "disk",
+      "key": "│   Storage :",
+      "folders": "/",
+      "keyColor": "white",
+      "format": "{2}                        │"
+    },
+    {
+      "type": "custom",
+      "keyColor": "white",
+      "key": "╰────────────────────────────────────────────────╯",
+    },
+    {
+      "type": "colors",
+      "paddingLeft": 2,
+      "symbol": "circle"
+    },
+  ]
+}
