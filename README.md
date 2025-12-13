@@ -7,7 +7,8 @@ minimal hyprland setup
   - micro;
   - mako;
   - kitty;
-  - fastfetch
+  - fastfetch;
+  - playerctl
 
   fonts:
   - FiraCode;
