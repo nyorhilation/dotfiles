@@ -20,77 +20,106 @@
     selected-urgent-background: #EAAF9D;
     selected-urgent-foreground: @foreground;
 
-    background-color: rgba(0, 43, 54, 0.3);
+    background-color: rgba(0, 43, 54, 0.5);
     background: rgba(0, 43, 54, 0);
     foreground: #fdf6e3;
-    border-color: rgba(36, 39, 58, 0.1);
     spacing: 0;
 }
-
-configuration {
-    modi: "drun";
-    font: "Fira Code 10";
-    display-drun: "";
-    drun-display-format: "{icon} {name}";
-    show-icons: true;
-    icon-theme: "Gruvbox Dark";
+  configuration {
+    modi:                        "drun,filebrowser";
+    filenrowser-show-hidden: true;
+    show-icons:                  true;
+    display-drun:                "󰣆 ";
+    display-filebrowser:         " ";
+    drun-display-format:         "{icon} {name}";
+    font:                        "Comic Shanns Nerd Font 10";
+    icon-theme:                  "Gruvbox-Plus=Dark";
+    separator-style: none;
 }
 
-window {
+  window {
+    height: 60%;
+    width: 30%;
     transparency: "real";
-    width: 30%; 
-    border-radius: 30px;
+    border-radius: 5px;
+    padding: 0px;
+    border-color: rgba(42, 161, 152, 1);
 }
+  mainbox {
+    orientation: vertical;
+    children: [ "inputbar" , "dummybox" ];
+}
+  dummybox {
+    padding: 20px;
+    orientation: vertical;
+    children: [ "listbox" , "mode-switcher" ];
+    background-color: transparent;
+}
+  inputbar {
+    children: [ entry ];
+    background-image: url("~/Pictures/wallpapers/solarizedtouka.png", width);
+    padding: 100px 250px 10px 30px;
 
+}
 entry {
-    placeholder: "Pesquisar";
+    placeholder: "Search...";
     placeholder-color: @fg;
-    background-color: rgba(0, 43, 54, 0.3);
+    background-color: rgba(0, 43, 54, 0.7);
     expand: true;
     padding: 1.5%;
     border-radius: 8px;
 }
 
-inputbar {
-    children: [ entry ];
-    background-image: url("path/to/your/image");
-    border-radius: 0px 0 0px 0px;
-    padding: 100px 30px 30px 30px;
-    border-radius: 30px 30px 0px 0px;
+listbox {
+    children: [ "listview" ];
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 listview {
+    padding: 10px 10px 10px 10px;
     columns: 2;
-    lines: 6;
-    cycle: false;
+    lines: 5;
+    cycle: true;
     dynamic: true;
-    layout: vertical;
-    padding: 30px 30px 30px 30px;
     scrollbar: false;
+    layout: vertical;
+    expand: false;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+
 }
 
-mainbox {
-    children: [ inputbar, listview ];
-    border-radius: 30px;
+mode-switcher {
+    orientation: horizontal;
+    padding: 1px 20px 0px 400px;
+    spacing: 10px;
+    background-color: transparent;
+}
+button {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(0, 43, 54, 0.3);
+    text-color: @foreground;
 }
 
 element {
     orientation: horizontal;
-    padding: 1.5% 4% 1.5% 2%;
+    padding: 10px 10px 10px 15px;
     border-radius: 8px;
     background-color: rgba(42, 161, 152, 1);
 }
 
 element-icon {
-    size: 1.5em;
-    padding: 0px 10px 0px 0px;
+    size: 50px;
+    padding: 0px 5px 0px 0px;
     vertical-align: 0.5;
 }
 
 element-text {
-    size: 1.5em;
+    size: 1em;
     expand: true;
-    vertical-align: 0.4;
+    vertical-align: 0.5;
     background-color: inherit;
     text-color: inherit;
 }
