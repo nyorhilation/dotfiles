@@ -2,13 +2,13 @@
 
 * {
     font-size: 13px;
-    font-family: "FiraMono Nerd Font";
+    font-family: "Comic Shanns Mono Nerd Font";
 }
 window#waybar{
 	all: unset;
 	/* background: @color0; */
-} /*
-.modules-left {
+}
+/* .modules-left {
     padding:7px;
     margin:0px 0px 0px 0px;
     border-radius:0px 10px 0px 0px;
@@ -17,7 +17,7 @@ window#waybar{
 .modules-center {
     padding:7px;
     margin:5px 0px 5px 0px;
-    border-radius:10px 10px 10px 10px;
+    border-radius:5px 5px 5px 5px;
     background: @color0;
  
 }
@@ -80,8 +80,8 @@ tooltip {
     color:@color15;
 
 }
-#cpu,#memory,#temperature{
-    padding: 0px 5px;
+#clock #workspaces #cpu,#memory,#temperature{
+    padding: 0px 15px 0px 10px;
     transition: all .3s ease; 
     color:@color15;
 
@@ -97,9 +97,14 @@ tooltip {
 }
 #cava {
 	background: @color6;
-	border-radius: 5px 0px 0px 5px;
+	border-radius: 3px 0px 0px 3px;
+	padding: 0px 10px 0px 15px;
 }
 #pulseaudio {
 	background: @color6;
-	border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 3px 3px 0px;
+	padding: 0px 15px 0px 10px;
+}
+#tray {
+	padding: 0px 10px 0px 10px;
 }
