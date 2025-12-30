@@ -1,12 +1,13 @@
 {
   "logo": {
-    "source": "path/to/your/logo",
-    "height": 11
+    "source": "~/Pictures/icons/hutao.png",
+    "height": 12
   },
   "display": {
     "separator": " "
   },
   "modules": [
+    "break",
     {
       "type": "title",
       "key": "╭   :",
@@ -15,52 +16,58 @@
     },
     {
       "type": "custom",
-      "key": "│  神代利世 :",
-      "format": "Não existe essa coisa de destino   │",
+      "key": "│  subatomic interactions",
+      "format": "if its all good        │",
       "keyColor": "white"
     },
     {
       "type": "os",
-      "key": "│   OS :",
-      "format": "{3}                   │",
+      "key": "│    operational system :",
+      "format": "{3}  │",
       "keyColor": "white"
     },
     {
       "type": "display",
-      "key": "│  󰍹  Display :",
+      "key": "│  󰍹  display :",
       "format": "{1}x{2} @ {3}Hz                │",
       "keyColor": "white"
     },
     {
       "type": "terminal",
-      "key": "│    Terminal :",
+      "key": "│    terminal :",
       "keyColor": "white",
-      "format": "{1}                           │"
+      "format": "{1}                         │"
     },
     {
       "type": "wm",
-      "key": "│   WM :",
-      "format": "{2}                               │",
+      "key": "│    window manager :",
+      "format": "{2}                  │",
       "keyColor": "white"
     },
     {
       "type": "cpu",
       "format": "{1} @ {7}        │",
-      "key": "│    CPU :",
+      "key": "│    cpu :",
+      "keyColor": "white"
+    },
+    {
+      "type": "gpu",
+      "format": "{2}                   │",
+      "key": "│  󰖺  gpu :",
       "keyColor": "white"
     },
     {
       "type": "memory",
-      "key": "│    Memory :",
+      "key": "│    memory :",
       "keyColor": "white",
       "format": "{2}                         │"
     },
     {
       "type": "disk",
-      "key": "│   Storage :",
+      "key": "│    storage :",
       "folders": "/",
       "keyColor": "white",
-      "format": "{2}                        │"
+      "format": "{2}                       │"
     },
     {
       "type": "custom",
@@ -72,5 +79,7 @@
       "paddingLeft": 2,
       "symbol": "circle"
     },
+    "break",
+    "break",
   ]
 }

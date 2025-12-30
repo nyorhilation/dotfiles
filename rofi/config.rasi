@@ -1,9 +1,9 @@
 * {
-    active-background: rgba(42, 161, 152, 1);
+    active-background: #F66979;
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: #6D95B7;
+    urgent-background: #A9626E;
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -13,18 +13,20 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: #6D95B7;
+    selected-active-background: #A9626E;
     selected-active-foreground: @foreground;
-    selected-normal-background: rgba(42, 161, 152, 1);
+    selected-normal-background: #F66979;
     selected-normal-foreground: @foreground;
-    selected-urgent-background: #EAAF9D;
+    selected-urgent-background: #877F80;
     selected-urgent-foreground: @foreground;
 
-    background-color: rgba(0, 43, 54, 0.5);
-    background: rgba(0, 43, 54, 0);
-    foreground: #fdf6e3;
-    spacing: 0;
+    background-color: @background;
+    background: #0A080F;
+    foreground: #e9e3e2;
+    border-color: @background;
+    spacing: 2;
 }
+
   configuration {
     modi:                        "drun,filebrowser";
     filenrowser-show-hidden: true;
@@ -43,7 +45,8 @@
     transparency: "real";
     border-radius: 5px;
     padding: 0px;
-    border-color: rgba(42, 161, 152, 1);
+    border-color: @selected-active-background;
+    border: 2px;
 }
   mainbox {
     orientation: vertical;
@@ -57,14 +60,14 @@
 }
   inputbar {
     children: [ entry ];
-    background-image: url("~/Pictures/wallpapers/solarizedtouka.png", width);
+    background-image: url("~/Pictures/wallpapers/hutaowall.jpg", width);
     padding: 100px 250px 10px 30px;
 
 }
 entry {
     placeholder: "Search...";
     placeholder-color: @fg;
-    background-color: rgba(0, 43, 54, 0.7);
+    background-color: #282828;
     expand: true;
     padding: 1.5%;
     border-radius: 8px;
@@ -99,7 +102,7 @@ mode-switcher {
 button {
     border-radius: 8px;
     padding: 10px;
-    background-color: rgba(0, 43, 54, 0.3);
+    background-color: @bg;
     text-color: @foreground;
 }
 
@@ -128,3 +131,6 @@ element selected {
     background-color: rgba(42, 161, 152, 1);
     border-radius: 8px;
 }
+
+
+
